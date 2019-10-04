@@ -3,24 +3,18 @@ package piggybank;
 public class Dime extends Money
 {
     // fields
-    // private int count;
-    // private double value;
-
-    // constructor
-    public Dime()
-    {
-        super();
-    }
+    private int count;
+    private double value;
 
     // pass in method from Money
-    public Dime(int count)
+    public Dime(int count, int value)
     {
-        super(count);
+        super(count, value);
     }
 
     // from Money
     @Override
-    public String getValue()
+    public double value()
     {
         return count * 0.10;
     }

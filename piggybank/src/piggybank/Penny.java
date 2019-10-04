@@ -3,23 +3,18 @@ package piggybank;
 public class Penny extends Money
 {
     // fields
-    // private String name;
-    // private int count;
+    private int count;
+    private int value;
 
     // constructor
-    public Penny(int count)
+    public Penny(int count, int value)
     {
-        super(count);
-    }
-
-    public Penny()
-    {
-        super();
+        super(count, value);
     }
 
     // from Money
     @Override
-    public String getValue()
+    public double value()
     {
         return count * 0.01;
     }

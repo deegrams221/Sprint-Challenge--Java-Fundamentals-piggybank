@@ -3,23 +3,19 @@ package piggybank;
 public class Nickel extends Money
 {
     // fields
-    // private int count;
-    // private double value;
+    private int count;
+    private int value;
 
     // constructor
-    public Nickel(int count)
+    public Nickel(int count, int value)
     {
-        super(count);
+        super(count, value);
     }
 
-    public Nickel()
-    {
-        super(); 
-    }
 
     // from Money
     @Override
-    public String getValue()
+    public double value()
     {
         return count * 0.05;
     }

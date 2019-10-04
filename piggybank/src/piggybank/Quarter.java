@@ -3,23 +3,19 @@ package piggybank;
 public class Quarter extends Money
 {
     // fields
-    // private int count;
-    // private double value;
+    private int count;
+    private double value;
 
     // constructor
-    public Quarter(int count)
+    public Quarter(int count, int value)
     {
-        super(count);
+        super(count, value);
     }
 
-    public Quarter()
-    {
-        super(); 
-    }
 
     // from Money
     @Override
-    public String getValue()
+    public double value()
     {
         return count * 0.25;
     }
