@@ -3,8 +3,8 @@ package piggybank;
 public class Dime extends MoneyAbstract
 {
     // fields
-    private String name;
-    private int count;
+    // private String name;
+    // private int count;
 
     // constructor
     public Dime(String name, int count)
@@ -13,10 +13,10 @@ public class Dime extends MoneyAbstract
         moneyValue = 0.10;
     }
 
-    public Dime()
-    {
-        moneyValue = 0.10;
-    }
+    // public Dime()
+    // {
+    //     moneyValue = 0.10;
+    // }
 
     // from MoneyAbstract
     @Override
@@ -30,7 +30,7 @@ public class Dime extends MoneyAbstract
     {
         if (this.count > 1)
         {
-            retrun count + " Dimes";
+            return count + " Dimes";
         } else 
         {
             return strValue();

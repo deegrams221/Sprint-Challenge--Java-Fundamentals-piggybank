@@ -3,8 +3,8 @@ package piggybank;
 public class Penny extends MoneyAbstract
 {
     // fields
-    private String name;
-    private int count;
+    // private String name;
+    // private int count;
 
     // constructor
     public Penny(String name, int count)
@@ -13,10 +13,10 @@ public class Penny extends MoneyAbstract
         moneyValue = 0.01;
     }
 
-    public Penny()
-    {
-        moneyValue = 0.01;
-    }
+    // public Penny()
+    // {
+    //     moneyValue = 0.01;
+    // }
 
     // from MoneyAbstract
     @Override
@@ -30,7 +30,7 @@ public class Penny extends MoneyAbstract
     {
         if (this.count > 1)
         {
-            retrun count + " Pennies";
+            return count + " Pennies";
         } else 
         {
             return strValue();

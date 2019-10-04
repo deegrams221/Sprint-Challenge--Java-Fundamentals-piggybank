@@ -3,8 +3,8 @@ package piggybank;
 public class Nickel extends MoneyAbstract
 {
     // fields
-    private String name;
-    private int count;
+    // private String name;
+    // private int count;
 
     // constructor
     public Nickel(String name, int count)
@@ -13,10 +13,10 @@ public class Nickel extends MoneyAbstract
         moneyValue = 0.05;
     }
 
-    public Nickel()
-    {
-        moneyValue = 0.05;
-    }
+    // public Nickel()
+    // {
+    //     moneyValue = 0.05;
+    // }
 
     // from MoneyAbstract
     @Override
@@ -30,7 +30,7 @@ public class Nickel extends MoneyAbstract
     {
         if (this.count > 1)
         {
-            retrun count + " Nickels";
+            return count + " Nickels";
         } else 
         {
             return strValue();

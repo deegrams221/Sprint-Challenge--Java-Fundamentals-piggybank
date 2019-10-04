@@ -3,8 +3,8 @@ package piggybank;
 public class Quarter extends MoneyAbstract
 {
     // fields
-    private String name;
-    private int count;
+    // private String name;
+    // private int count;
 
     // constructor
     public Quarter(String name, int count)
@@ -13,10 +13,10 @@ public class Quarter extends MoneyAbstract
         moneyValue = 0.25;
     }
 
-    public Quarter()
-    {
-        moneyValue = 0.25;
-    }
+    // public Quarter()
+    // {
+    //     moneyValue = 0.25;
+    // }
 
     // from MoneyAbstract
     @Override
@@ -30,7 +30,7 @@ public class Quarter extends MoneyAbstract
     {
         if (this.count > 1)
         {
-            retrun count + " Quarters";
+            return count + " Quarters";
         } else 
         {
             return strValue();

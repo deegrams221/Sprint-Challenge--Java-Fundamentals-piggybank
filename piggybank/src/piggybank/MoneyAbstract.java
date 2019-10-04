@@ -4,33 +4,26 @@ import java.math.BigDecimal;
 
 public abstract class MoneyAbstract
 {
+    // fields
+    String name;
     int count = 1;
     double moneyValue;
 
-    public MoneyAbstract(int count)
+    public MoneyAbstract(String name, int count)
     {
-        this.count = count
-    }
-
-    // methods: getters/setters
-    public int getCount()
-    {
-        return count;
-    }
-
-    public int setCount(int count)
-    {
+        this.name = name;
         this.count = count;
     }
 
-    public double getValue()
+    // methods
+    public String getName()
     {
-        return moneyValue * count;
+        return name;
     }
 
-    public double setValue(int value)
+    public int getCount()
     {
-        this.value = value;
+        return count;
     }
 
     public double getMoneyValue()
@@ -38,9 +31,9 @@ public abstract class MoneyAbstract
         return moneyValue;
     }
 
-    public double setMoneyValue(double moneyValue)
+    public double getValue()
     {
-        this.moneyValue = moneyValue;
+        return moneyValue * count;
     }
 
     // abstract methods
