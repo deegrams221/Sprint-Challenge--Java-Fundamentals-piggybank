@@ -6,6 +6,7 @@ public class Penny extends Money
     public Penny(int count)
     {
         super(count);
+        value = 0.01;
     }
 
     public Penny()
@@ -23,7 +24,7 @@ public class Penny extends Money
     @Override
     public String getCount()
     {
-        if (count >= 1)
+        if (this.count == 1)
         {
             return count + " Penny";
         } else 
