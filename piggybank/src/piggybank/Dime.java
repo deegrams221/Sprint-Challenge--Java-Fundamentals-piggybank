@@ -3,8 +3,8 @@ package piggybank;
 public class Dime extends MoneyAbstract
 {
     // fields
-    // private String name;
-    // private int count;
+    private String name;
+    private int count;
 
     // constructor
     public Dime(String name, int count)

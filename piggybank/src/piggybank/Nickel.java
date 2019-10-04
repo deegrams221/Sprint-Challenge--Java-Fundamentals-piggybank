@@ -3,8 +3,8 @@ package piggybank;
 public class Nickel extends MoneyAbstract
 {
     // fields
-    // private String name;
-    // private int count;
+    private String name;
+    private int count;
 
     // constructor
     public Nickel(String name, int count)

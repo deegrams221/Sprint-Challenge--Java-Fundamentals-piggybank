@@ -26,6 +26,11 @@ public abstract class MoneyAbstract
         return count;
     }
 
+    public void setCount(int count)
+    {
+        this.count = count;
+    }
+
     public double getMoneyValue()
     {
         return moneyValue;

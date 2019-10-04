@@ -3,8 +3,8 @@ package piggybank;
 public class Penny extends MoneyAbstract
 {
     // fields
-    // private String name;
-    // private int count;
+    private String name;
+    private int count;
 
     // constructor
     public Penny(String name, int count)
