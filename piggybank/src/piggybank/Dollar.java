@@ -1,48 +1,47 @@
 package piggybank;
 
-public class Dollar extends MoneyAbstract
+public class Dollar extends Money
 {
     // fields
-    private String name;
-    private int count;
+    // private int count;
+    // private double value;
 
     // constructor
-    public Dollar(String name, int count)
+    public Dollar(int count)
     {
-        super(name, count);
-        moneyValue = 1.00;
+        super(count);
     }
 
-    // public Dollar()
-    // {
-    //     moneyValue = 1.00;
-    // }
-
-    // from MoneyAbstract
-    @Override
-    public String strValue()
+    public Dollar()
     {
-        return "$" + count;
+        super();
+    }
+
+    // from Money
+    @Override
+    public String getValue()
+    {
+        return count * 1.00;
     }
 
     @Override
-    public String strValueInc()
+    public String getCount()
     {
-        if (this.count > 1)
+        if (count == 1)
         {
             return "$" + count;
         } else 
         {
-            return strValue();
+            return "$" + count;
         }
     }
 
-    @Override
-    public String toString()
-    {
-        return "Dollar{" +
-                "name='" + name + '\'' +
-                ", count=" + count + 
-                '}';
-    }
+    // @Override
+    // public String toString()
+    // {
+    //     return "Dollar{" +
+    //             "name='" + name + '\'' +
+    //             ", count=" + count + 
+    //             '}';
+    // }
 }

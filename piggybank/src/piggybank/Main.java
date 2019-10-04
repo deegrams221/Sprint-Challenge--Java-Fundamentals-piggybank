@@ -9,20 +9,11 @@ import java.text.DecimalFormat;
 
 public class Main
 {
-    public static void printMoney(ArrayList<MoneyAbstract> moneys, CheckMoney tester) 
-    {
-        for (MoneyAbstract m : moneys) 
-        {
-            if (tester.test(m)) 
-            {
-                System.out.println(m.getValue());
-            }
-        }
-    }
-
     public static void main(String[] args)
     {
         DecimalFormat fp = new DecimalFormat("$###,###.00");
+
+        ArrayList<Money> piggyBank = new ArrayList<Money>();
 
         // * A Dollar worth $1.00
         // * A Quarter worth $0.25
@@ -30,7 +21,6 @@ public class Main
         // * A Nickel worth $0.05
         // * A Penny worth $0.01 
 
-        ArrayList<MoneyAbstract> piggyBank = new ArrayList<MoneyAbstract>();
         // Create collection
         piggyBank.add(new Quarter());
         piggyBank.add(new Dime());
@@ -47,17 +37,16 @@ public class Main
         // `7 Dimes`  
         // `$1`  
         // `10 Pennies`  
-        
-        // Print the contents of the Piggy Bank
-        System.out.println("Inside the piggybank is:\n");
-        piggyBank.forEach(p -> System.out.println(p.strValueInc()));
 
-        double myValue = 0.0;
-        for (MoneyAbstract m : piggyBank)
+        double bankTotal = 0.00;
+        for (int i = 0; i < piggyBank.size(); i++)
         {
-            myValue = myValue + m.getValue();
+            bankTotal += piggyBank.get(i).getValue();
         }
+        System.out.println("\nThe piggy bank holds " + fp.format(myValue));
         
-        System.out.println("The piggy bank holds " + fp.format(myValue));
+        // Print the contents of the Piggybank
+        System.out.println("\nInside the piggybank is:\n");
+        piggyBank.forEach(m -> System.out.println(m.getValue()));
     }
 }

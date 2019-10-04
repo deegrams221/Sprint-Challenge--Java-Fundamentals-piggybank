@@ -1,48 +1,47 @@
 package piggybank;
 
-public class Nickel extends MoneyAbstract
+public class Nickel extends Money
 {
     // fields
-    private String name;
-    private int count;
+    // private int count;
+    // private double value;
 
     // constructor
-    public Nickel(String name, int count)
+    public Nickel(int count)
     {
-        super(name, count);
-        moneyValue = 0.05;
+        super(count);
     }
 
-    // public Nickel()
-    // {
-    //     moneyValue = 0.05;
-    // }
-
-    // from MoneyAbstract
-    @Override
-    public String strValue()
+    public Nickel()
     {
-        return count + " Nickel";
+        super(); 
+    }
+
+    // from Money
+    @Override
+    public String getValue()
+    {
+        return count * 0.05;
     }
 
     @Override
-    public String strValueInc()
+    public String getCount()
     {
-        if (this.count > 1)
+        if (count == 1)
         {
-            return count + " Nickels";
+            return count + " Nickel";
         } else 
         {
-            return strValue();
+            return count + " Nickels";
         }
     }
 
-    @Override
-    public String toString()
-    {
-        return "Nickel{" +
-                "name='" + name + '\'' +
-                ", count=" + count + 
-                '}';
-    }
+    // @Override
+    // public String toString()
+    // {
+    //     return "Nickel{" +
+    //             "name='" + name + '\'' +
+    //             ", count=" + count + 
+    //             '}';
+    // }
 }

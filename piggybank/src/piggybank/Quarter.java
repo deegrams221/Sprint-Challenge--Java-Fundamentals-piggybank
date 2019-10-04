@@ -1,48 +1,47 @@
 package piggybank;
 
-public class Quarter extends MoneyAbstract
+public class Quarter extends Money
 {
     // fields
-    private String name;
-    private int count;
+    // private int count;
+    // private double value;
 
     // constructor
-    public Quarter(String name, int count)
+    public Quarter(int count)
     {
-        super(name, count);
-        moneyValue = 0.25;
+        super(count);
     }
 
-    // public Quarter()
-    // {
-    //     moneyValue = 0.25;
-    // }
-
-    // from MoneyAbstract
-    @Override
-    public String strValue()
+    public Quarter()
     {
-        return count + " Quarter";
+        super(); 
+    }
+
+    // from Money
+    @Override
+    public String getValue()
+    {
+        return count * 0.25;
     }
 
     @Override
-    public String strValueInc()
+    public String getCount()
     {
-        if (this.count > 1)
+        if (count == 1)
         {
-            return count + " Quarters";
+            return count + " Quarter";
         } else 
         {
-            return strValue();
+            return count + " Quarters";
         }
     }
 
-    @Override
-    public String toString()
-    {
-        return "Quarter{" +
-                "name='" + name + '\'' +
-                ", count=" + count + 
-                '}';
-    }
+    // @Override
+    // public String toString()
+    // {
+    //     return "Quarter{" +
+    //             "name='" + name + '\'' +
+    //             ", count=" + count + 
+    //             '}';
+    // }
 }
