@@ -2,20 +2,20 @@ package piggybank;
 
 public class Nickel extends Money
 {
-    // fields
-    private int count;
-    private int value;
-
-    // constructor
-    public Nickel(int count, int value)
+    // pass in method from Money
+    public Nickel(int count)
     {
-        super(count, value);
+        super(count);
     }
 
+    public Nickel()
+    {
+        super();
+    }
 
     // from Money
     @Override
-    public double value()
+    public double getValue()
     {
         return count * 0.05;
     }

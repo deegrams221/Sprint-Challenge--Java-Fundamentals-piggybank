@@ -47,6 +47,6 @@ public class Main
         
         // Print the contents of the Piggybank
         System.out.println("\nInside the piggybank is:\n");
-        piggyBank.forEach(m -> System.out.println(m.getValue()));
+        piggyBank.forEach(m -> System.out.println(m.getCount()));
     }
 }

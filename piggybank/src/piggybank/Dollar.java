@@ -2,21 +2,21 @@ package piggybank;
 
 public class Dollar extends Money
 {
-    // fields
-    private int count;
-    private double value;
-
-    // constructor
-    public Dollar(int count, int value)
+    // pass in method from Money
+    public Dollar(int count)
     {
-        super(count, value);
+        super(count);
     }
 
+    public Dollar()
+    {
+        super();
+    }
 
 
     // from Money
     @Override
-    public double value()
+    public double getValue()
     {
         return count * 1.00;
     }

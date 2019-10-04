@@ -2,20 +2,21 @@ package piggybank;
 
 public class Quarter extends Money
 {
-    // fields
-    private int count;
-    private double value;
-
-    // constructor
-    public Quarter(int count, int value)
+    // pass in method from Money
+    public Quarter(int count)
     {
-        super(count, value);
+        super(count);
+    }
+
+    public Quarter()
+    {
+        super();
     }
 
 
     // from Money
     @Override
-    public double value()
+    public double getValue()
     {
         return count * 0.25;
     }

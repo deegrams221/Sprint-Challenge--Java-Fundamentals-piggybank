@@ -2,19 +2,20 @@ package piggybank;
 
 public class Penny extends Money
 {
-    // fields
-    private int count;
-    private int value;
-
-    // constructor
-    public Penny(int count, int value)
+    // pass in method from Money
+    public Penny(int count)
     {
-        super(count, value);
+        super(count);
+    }
+
+    public Penny()
+    {
+        super();
     }
 
     // from Money
     @Override
-    public double value()
+    public double getValue()
     {
         return count * 0.01;
     }
@@ -22,7 +23,7 @@ public class Penny extends Money
     @Override
     public String getCount()
     {
-        if (count == 1)
+        if (count >= 1)
         {
             return count + " Penny";
         } else 
