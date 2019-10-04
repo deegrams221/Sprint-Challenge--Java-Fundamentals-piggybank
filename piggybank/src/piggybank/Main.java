@@ -9,11 +9,11 @@ import java.text.DecimalFormat;
 
 public class Main
 {
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
         DecimalFormat fp = new DecimalFormat("$###,###.00");
 
-        ArrayList<Money> piggyBank = new ArrayList<Money>();
+        ArrayList<AbstractMoney> piggyBank = new ArrayList<AbstractMoney>();
 
         // * A Dollar worth $1.00
         // * A Quarter worth $0.25
@@ -38,15 +38,18 @@ public class Main
         // `$1`  
         // `10 Pennies`  
 
-        double bankTotal = 0.00;
-        for (int i = 0; i < piggyBank.size(); i++)
-        {
-            bankTotal += piggyBank.get(i).getValue();
-        }
-        System.out.println("\nThe piggy bank holds " + fp.format(myValue));
-        
-        // Print the contents of the Piggybank
+        // Prints out each AbstractMoneys values
         System.out.println("\nInside the piggybank is:\n");
         piggyBank.forEach(m -> System.out.println(m.getCount()));
+        System.out.println("\n");
+
+        // if the number < the piggybank size than add onto it.
+	    double bankTotal = 0.00;
+	    for(int i = 0; i < piggyBank.size(); i++)
+        {
+            bankTotal += piggyBank.get(i).getTotal();
+        }
+
+        System.out.println("\nThe piggy bank holds " + fp.format(bankTotal));
     }
 }

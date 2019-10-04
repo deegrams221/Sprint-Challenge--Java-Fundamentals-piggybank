@@ -1,27 +1,26 @@
 package piggybank;
 
-public class Nickel extends Money
+public class Nickel extends AbstractMoney 
 {
-    // pass in method from Money
-    public Nickel(int count)
+
+    // Pass from AbstractMoney
+    public Nickel(int count) 
     {
+
         super(count);
     }
 
-    public Nickel()
+    public Nickel() 
     {
+
         super();
     }
 
-    // from Money
+    // overrides from AbstractMoney
     @Override
-    public double getValue()
-    {
-        return count * 0.05;
-    }
-
-    @Override
-    public String getCount()
+    // if the count = 1 then return count + Nickel
+    // if the count != 1 then add the count to Nickels
+    public String getCount() 
     {
         if (count == 1)
         {
@@ -32,12 +31,9 @@ public class Nickel extends Money
         }
     }
 
-    // @Override
-    // public String toString()
-    // {
-    //     return "Nickel{" +
-    //             "name='" + name + '\'' +
-    //             ", count=" + count + 
-    //             '}';
-    // }
-}
+    @Override
+    public double getTotal() 
+    {
+        return count * 0.05;
+    }
+} 

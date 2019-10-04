@@ -1,27 +1,26 @@
 package piggybank;
 
-public class Dime extends Money
+public class Dime extends AbstractMoney 
 {
-    // pass in method from Money
-    public Dime(int count)
+
+    // Pass from AbstractMoney
+    public Dime(int count) 
     {
+
         super(count);
     }
 
-    public Dime()
+    public Dime() 
     {
+
         super();
     }
 
-    // from Money
+    // overrides from AbstractMoney
     @Override
-    public double getValue()
-    {
-        return count * 0.10;
-    }
-
-    @Override
-    public String getCount()
+    // if the count = 1 then return count + Dime
+    // if the count != 1 then add the count to Dimes
+    public String getCount() 
     {
         if (count == 1)
         {
@@ -32,12 +31,9 @@ public class Dime extends Money
         }
     }
 
-    // @Override
-    // public String toString()
-    // {
-    //     return "Dime{" +
-    //             "name='" + name + '\'' +
-    //             ", count=" + count + 
-    //             '}';
-    // }
-}
+    @Override
+    public double getTotal() 
+    {
+        return count * 0.10;
+    }
+} 

@@ -1,44 +1,32 @@
 package piggybank;
 
-public class Dollar extends Money
+public class Dollar extends AbstractMoney 
 {
-    // pass in method from Money
-    public Dollar(int count)
+
+    // Pass from AbstractMoney
+    public Dollar(int count) 
     {
+
         super(count);
     }
 
-    public Dollar()
+    public Dollar() 
     {
+
         super();
     }
 
-
-    // from Money
+    // overrides from AbstractMoney
     @Override
-    public double getValue()
+    // return "$" + count
+    public String getCount() 
+    {
+        return "$" + count;
+    }
+
+    @Override
+    public double getTotal() 
     {
         return count * 1.00;
     }
-
-    @Override
-    public String getCount()
-    {
-        if (count == 1)
-        {
-            return "$" + count;
-        } else 
-        {
-            return "$" + count;
-        }
-    }
-
-    // @Override
-    // public String toString()
-    // {
-    //     return "Dollar{" +
-    //             "name='" + name + '\'' +
-    //             ", count=" + count + 
-    //             '}';
-    // }
-}
+} 

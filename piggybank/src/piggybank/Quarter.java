@@ -1,28 +1,26 @@
 package piggybank;
 
-public class Quarter extends Money
+public class Quarter extends AbstractMoney 
 {
-    // pass in method from Money
-    public Quarter(int count)
+
+    // Pass from AbstractMoney
+    public Quarter(int count) 
     {
+
         super(count);
     }
 
-    public Quarter()
+    public Quarter() 
     {
+
         super();
     }
 
-
-    // from Money
+    // overrides from AbstractMoney
     @Override
-    public double getValue()
-    {
-        return count * 0.25;
-    }
-
-    @Override
-    public String getCount()
+    // if the count = 1 then return count + Quarter
+    // if the count != 1 then add the count to Quarters
+    public String getCount() 
     {
         if (count == 1)
         {
@@ -33,12 +31,9 @@ public class Quarter extends Money
         }
     }
 
-    // @Override
-    // public String toString()
-    // {
-    //     return "Quarter{" +
-    //             "name='" + name + '\'' +
-    //             ", count=" + count + 
-    //             '}';
-    // }
-}
+    @Override
+    public double getTotal() 
+    {
+        return count * 0.25;
+    }
+} 
