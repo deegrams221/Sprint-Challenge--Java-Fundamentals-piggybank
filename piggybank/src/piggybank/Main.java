@@ -9,7 +9,16 @@ import java.text.DecimalFormat;
 
 public class Main
 {
-    
+    public static void printMoney(ArrayList<Money> moneys, CheckMoney tester) 
+    {
+        for (Money a : moneys) 
+        {
+            if (tester.test(m)) 
+            {
+                System.out.println(m.getValue());
+            }
+        }
+    }
 
     public static void main(String[] args)
     {

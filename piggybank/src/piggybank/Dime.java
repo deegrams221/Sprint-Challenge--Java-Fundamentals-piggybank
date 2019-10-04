@@ -2,9 +2,14 @@ package piggybank;
 
 public class Dime extends MoneyAbstract
 {
-    public Dime(int count)
+    // fields
+    private String name;
+    private int count;
+
+    // constructor
+    public Dime(String name, int count)
     {
-        super(count);
+        super(name, count);
         moneyValue = 0.10;
     }
 
@@ -13,6 +18,7 @@ public class Dime extends MoneyAbstract
         moneyValue = 0.10;
     }
 
+    // from MoneyAbstract
     @Override
     public String strValue()
     {
@@ -29,5 +35,14 @@ public class Dime extends MoneyAbstract
         {
             return strValue();
         }
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Dime{" +
+                "name='" + name + '\'' +
+                ", count=" + count + 
+                '}';
     }
 }
