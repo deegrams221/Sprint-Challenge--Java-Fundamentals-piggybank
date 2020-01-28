@@ -1,29 +1,28 @@
 package piggybank;
 
-public class Penny extends Money
+public class Penny extends AbstractMoney 
 {
-    // pass in method from Money
-    public Penny(int count)
+
+    // Pass from AbstractMoney
+    public Penny(int count) 
     {
+
         super(count);
     }
 
-    public Penny()
+    public Penny() 
     {
+
         super();
     }
 
-    // from Money
+    // overrides from AbstractMoney
     @Override
-    public double getValue()
+    // if the count = 1 then return count + Penny
+    // if the count != 1 then add the count to Pennies
+    public String getCount() 
     {
-        return count * 0.01;
-    }
-
-    @Override
-    public String getCount()
-    {
-        if (count >= 1)
+        if (count == 1)
         {
             return count + " Penny";
         } else 
@@ -32,12 +31,9 @@ public class Penny extends Money
         }
     }
 
-    // @Override
-    // public String toString()
-    // {
-    //     return "Penny{" +
-    //             "name='" + name + '\'' +
-    //             ", count=" + count + 
-    //             '}';
-    // }
-}
+    @Override
+    public double getTotal() 
+    {
+        return count * 0.01;
+    }
+} 

@@ -1,19 +1,22 @@
 package piggybank;
 
-public abstract class AbstractMoney 
+public abstract class AbstractMoney
 {
     // fields
-    private int count;
-    private double value;
+    int count;
 
-    // constructor
-    public AbstractMoney(int count, double value) 
+    // constructors
+    public AbstractMoney(int count) 
     {
         this.count = count;
-        this.value = value;
+    }
+
+    public AbstractMoney() 
+    {
+        count = 1;
     }
 
     // abstract methods
-    public abstract int count();
-    public abstract double value();
+    public abstract String getCount();
+    public abstract double getTotal();
 } 
